@@ -44,5 +44,24 @@ The implementation is encapsulated within a Python class `ApparelClassifier` for
     *   Calls `explain_results` to print metric explanations.
     *   Calls `visualize_predictions` with specific sample indices.
     *   Calls `export_model` to save the trained model as 'refactored\_fashion\_cnn.keras'.
+  
+# Model Evaluation: Classification report
+The trained CNN model was evaluated on the Fashion MNIST test set (10,000 samples) and achieved 93% overall accuracy. Below is a breakdown of its classification performance across all 10 fashion categories:
+
+ **Key Metrics:**
+Accuracy: 93%
+
+* Macro Avg (unweighted mean across classes): Precision = 0.93, Recall = 0.93, F1 = 0.93
+
+* Weighted Avg (mean weighted by support): Precision = 0.93, Recall = 0.93, F1 = 0.93
+
+**Observations**:
+* The model performs exceptionally well on categories like Trouser, Sandal, Bag, and Ankle boot, each with F1-scores near or above 0.97.
+
+* Shirt is the most challenging category, with lower precision (0.75) and F1-score (0.79), likely due to visual similarities with classes like T-shirt/top and Coat.
+
+* The balanced support (1,000 samples per class) ensures fair evaluation across all categories.
+
+
 
 This notebook provides a complete workflow for building, training, evaluating, and explaining a CNN classifier for image data.
